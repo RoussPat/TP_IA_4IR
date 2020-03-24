@@ -14,42 +14,45 @@
    % ETAT INITIAL DU JEU
    %********************   
    % format :  initial_state(+State) ou State est une matrice (liste de listes)
-   
-/*
-initial_state([ [b, h, c],       % C'EST L'EXEMPLE PRIS EN COURS
+
+
+initial_state1([ [b, h, c],       % C'EST L'EXEMPLE PRIS EN COURS
                 [a, f, d],       % 
                 [g,vide,e] ]).   % h1=4,   h2=5,   f*=5
-*/
 
 
 % AUTRES EXEMPLES POUR LES TESTS DE  A*
 
-/*
-initial_state([ [ a, b, c],        
+
+initial_state2([ [ a, b, c],        
                 [ g, h, d],
                 [vide,f, e] ]). % h2=2, f*=2
-*//*
-initial_state([ [b, c, d],
+
+initial_state3([ [b, c, d],
                 [a,vide,g],
                 [f, h, e]  ]). % h2=10 f*=10
-*//*
-initial_state([ [f, g, a],
+
+initial_state4([ [f, g, a],
                 [h,vide,b],
                 [d, c, e]  ]). % h2=16, f*=20
-*//*
-initial_state([ [e, f, g],
+
+initial_state5([ [e, f, g],
                 [d,vide,h],
                 [c, b, a]  ]). % h2=24, f*=30 
-*/
-initial_state([ [a, b, c],
+
+initial_state6([ [a, b, c],
                 [g,vide,d],
                 [h, f, e]]). % etat non connexe avec l'etat final (PAS DE SOLUTION)
-/*
-initial_state([[2, 1, 6, 9],
+
+initial_state7([[2, 1, 6, 9],
 		[11, 8, 3, 13],
 		[4, 7, 14,15],
 		[5, 12, 10, vide]]).
-*/
+
+initial_state8([[1, 2, 3, 4],
+		[5, 6, 7,8],
+		[9, 10, 11,12],
+		[13, 14, vide, 15]]).
 
 
    %******************
@@ -58,14 +61,14 @@ initial_state([[2, 1, 6, 9],
    % format :  final_state(+State) ou State est une matrice (liste de listes)
    
 
-/*
-  final_state([[1, 2, 3, 4],
+
+final_state4x4([[1, 2, 3, 4],
 		[5, 6, 7,8],
 		[9, 10, 11,12],
 		[13, 14, 15, vide]]).
 
-*/
-final_state([[a, b,  c],
+
+final_state3x3([[a, b,  c],
              [h,vide, d],
              [g, f,  e]]).
 
@@ -173,9 +176,9 @@ coordonnees([L,C], Mat, Elt) :-
    % HEURISTIQUES
    %*************
    
-heuristique(U,H) :-
-%   heuristique1(U, H).  % au debut on utilise l'heuristique 1 
-   heuristique2(U, H).  % ensuite utilisez plutot l'heuristique 2  
+heuristique(U,H, Fin) :-
+%   heuristique1(U, H, Fin).  % au debut on utilise l'heuristique 1 
+   heuristique2(U, H, Fin).  % ensuite utilisez plutot l'heuristique 2  
    
    
    %****************
@@ -184,8 +187,7 @@ heuristique(U,H) :-
    
    % Nombre de pieces mal placees dans l'etat courant U
    % par rapport a l'etat final F
-    heuristique1(U, H) :-
-        final_state(Fin),
+    heuristique1(U, H, Fin) :-
         findall(P, (nth1(L,U,L1), nth1(C,L1, P), nth1(L,Fin,L2), nth1(C,L2,P), P\=vide) ,T),
         findall(Q,(nth1(L,U,L1), nth1(C,L1, Q), Q\=vide),R),
         length(T,Tl),
@@ -230,8 +232,7 @@ diff_el(X,Y,1) :-
    % entre sa position courante et sa positon dans l'etat final
 
    
-    heuristique2(U, H) :-
-        final_state(Fin),
+    heuristique2(U, H, Fin) :-
         findall(D,(coordonnees([Li,Ci],U,P),
 				   P\=vide, 
 				   coordonnees([Lf,Cf],Fin,P),
