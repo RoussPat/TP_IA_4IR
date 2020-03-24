@@ -1,0 +1,168 @@
+?- situation_initiale(S), joueur_initial(J).
+S = [[_4334, _4340, _4346], [_4358, _4364, _4370], [_4382, _4388, _4394]],
+J = x.
+
+la situation initale est vide, Prolog met donc des variables non només
+
+?- situation_initiale(S), nth1(3,S,Lig), nth1(2,Lig,o).
+S = [[_3994, _4000, _4006], [_4018, _4024, _4030], [_4042, o, _4054]],
+Lig = [_4042, o, _4054].
+
+On met la 2eme colone de la 3eme ligne en 'o'
+
+?- situation_initiale(I), successeurs(x,I,Succ).
+I = [[_5542, _5548, _5554], [_5566, _5572, _5578], [_5590, _5596, _5602]],
+Succ = [[[1, 1], [[x, _6588, _6594], [_6606, _6612, _6618], [_6630, _6636, _6642]]], [[1, 2], [[_6480, x, _6492], [_6504, _6510, _6516], [_6528, _6534|...]]], [[1, 3], [[_6378, _6384, x], [_6402, _6408|...], [_6426|...]]], [[2, 1], [[_6276, _6282|...], [x|...], [...|...]]], [[2, 2], [[_6174|...], [...|...]|...]], [[2, 3], [[...|...]|...]], [[3|...], [...|...]], [[...|...]|...], [...|...]].
+ A COMMENTER
+
+
+?- situation_initiale(Sit), heuristique(x,Sit,H).
+Sit = [[_4876, _4882, _4888], [_4900, _4906, _4912], [_4924, _4930, _4936]],
+H = 0.
+ A COMMENTER
+
+
+?- heuristique(x,[[x,_,_],[_,_,_],[_,_,_]],H).
+H = 3.
+
+?- heuristique(o,[[x,_,_],[_,_,_],[_,_,_]],H).
+H = -3.
+
+?- heuristique(o,[[_,_,_],[_,x,_],[_,_,_]],H).
+H = -4.
+
+
+
+Test de vitesse pour Heurisitque 2
+________________________________________________________________________________________________
+
+initial_state([ [b, h, c],       
+                [a, f, d],       
+                [g,vide,e] ]).   
+% h1=4,   h2=5,   f*=5
+
+?- performance(R).
+up -> up -> left -> down -> right -> 
+R = 27 
+
+_________________________________________________________________________________________________
+
+initial_state([ [ a, b, c],        
+                [ g, h, d],
+                [vide,f, e] ]). 
+% h2=2, f*=2
+
+?- performance(R).
+up -> right -> 
+R = 26 
+
+_________________________________________________________________________________________________
+
+initial_state([ [b, c, d],
+                [a,vide,g],
+                [f, h, e]  ]). 
+% h2=10 f*=10
+
+?- performance(R).
+right -> up -> left -> left -> down -> right -> down -> left -> up -> right -> 
+R = 31 
+
+_________________________________________________________________________________________________
+
+initial_state([ [f, g, a],
+                [h,vide,b],
+                [d, c, e]  ]). 
+% h2=16, f*=20
+
+?- performance(R).
+down -> left -> up -> up -> right -> right -> down -> left -> down -> left -> up -> up -> right -> right -> down -> left -> down -> left -> up -> right -> 
+R = 55 
+
+_________________________________________________________________________________________________
+
+initial_state([ [e, f, g],
+                [d,vide,h],
+                [c, b, a]  ]). 
+% h2=24, f*=30 
+
+?- performance(R).
+right -> up -> left -> left -> down -> down -> right -> right -> up -> up -> left -> left -> down -> down -> right -> right -> up -> up -> left -> left -> down -> down -> right -> right -> up -> up -> left -> left -> down -> right -> 
+R = 564 
+
+_________________________________________________________________________________________________
+
+initial_state([ [a, b, c],
+                [g,vide,d],
+                [h, f, e]]). 
+% etat non connexe avec l'etat final (PAS DE SOLUTION)
+
+?- performance(R).
+ERROR: Out of local stack
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Test de vitesse pour Heurisitque 1
+________________________________________________________________________________________________
+
+initial_state([ [b, h, c],       
+                [a, f, d],       
+                [g,vide,e] ]).   
+% h1=4,   h2=5,   f*=5
+
+?- performance(R).
+up -> up -> left -> down -> right -> 
+R = 6 
+
+_________________________________________________________________________________________________
+
+initial_state([ [ a, b, c],        
+                [ g, h, d],
+                [vide,f, e] ]). 
+% h2=2, f*=2
+
+?- performance(R).
+up -> right -> 
+R = 1
+_________________________________________________________________________________________________
+
+initial_state([ [b, c, d],
+                [a,vide,g],
+                [f, h, e]  ]). 
+% h2=10 f*=10
+
+?- performance(R).
+right -> up -> left -> left -> down -> right -> down -> left -> up -> right -> 
+R = 7 
+_________________________________________________________________________________________________
+
+initial_state([ [f, g, a],
+                [h,vide,b],
+                [d, c, e]  ]). 
+% h2=16, f*=20
+
+?- performance(R).
+down -> left -> up -> up -> right -> right -> down -> left -> down -> left -> up -> up -> right -> right -> down -> left -> down -> left -> up -> right -> 
+R = 536 
+
+
+_________________________________________________________________________________________________
+
+initial_state([ [e, f, g],
+                [d,vide,h],
+                [c, b, a]  ]). 
+% h2=24, f*=30 
+
+?- performance(R).
+ERROR: Out of local stack
+
+_________________________________________________________________________________________________
+
+initial_state([ [a, b, c],
+                [g,vide,d],
+                [h, f, e]]). 
+% etat non connexe avec l'etat final (PAS DE SOLUTION)
+
+?- performance(R).
+ERROR: Out of local stack
+
+
