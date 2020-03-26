@@ -44,15 +44,15 @@ initial_state6([ [a, b, c],
                 [g,vide,d],
                 [h, f, e]]). % etat non connexe avec l'etat final (PAS DE SOLUTION)
 
-initial_state7([[2, 1, 6, 9],
-		[11, 8, 3, 13],
-		[4, 7, 14,15],
-		[5, 12, 10, vide]]).
+initial_state7([[b, a, f, i],
+				[k, h, c, m],
+				[d, g, n,o],
+				[e, l, j, vide]]).
 
-initial_state8([[1, 2, 3, 4],
-		[5, 6, 7,8],
-		[9, 10, 11,12],
-		[13, 14, vide, 15]]).
+initial_state8([[a, b, c, d],
+				[e, f, g, h],
+				[i, j, k, j],
+				[m, n, vide, o]]).
 
 
    %******************
@@ -62,10 +62,10 @@ initial_state8([[1, 2, 3, 4],
    
 
 
-final_state4x4([[1, 2, 3, 4],
-		[5, 6, 7,8],
-		[9, 10, 11,12],
-		[13, 14, 15, vide]]).
+final_state4x4([[a, b, c, d],
+				[e, f, g, h],
+				[i, j, k, l],
+				[m, n, o, vide]]).
 
 
 final_state3x3([[a, b,  c],
