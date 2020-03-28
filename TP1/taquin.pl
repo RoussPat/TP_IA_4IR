@@ -51,7 +51,7 @@ initial_state7([[b, a, f, i],
 
 initial_state8([[a, b, c, d],
 				[e, f, g, h],
-				[i, j, k, j],
+				[i, j, k, l],
 				[m, n, vide, o]]).
 
 

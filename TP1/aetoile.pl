@@ -212,8 +212,8 @@ testheuristique :-
 	initial_state4(IS4), %3x3
 	initial_state5(IS5), %3x3
 	initial_state6(IS6), %3x3 non connex
-	initial_state7(IS7), %4x4 
-	initial_state8(IS8), %4x4 trop lourd
+	initial_state7(IS7), %4x4 trop lourd
+	initial_state8(IS8), %4x4 
 	final_state3x3(FS3), %3x3
 	final_state4x4(FS4), %4x4
 
@@ -305,8 +305,8 @@ performance :-
 	initial_state4(IS4), %3x3
 	initial_state5(IS5), %3x3
 	initial_state6(IS6), %3x3 non connex
-	initial_state7(IS7), %4x4 
-	initial_state8(IS8), %4x4 trop lourd
+	initial_state7(IS7), %4x4 trop lourd
+	initial_state8(IS8), %4x4 
 	final_state3x3(FS3), %3x3
 	final_state4x4(FS4), %4x4
     statistics(runtime, [Start1,_]),
