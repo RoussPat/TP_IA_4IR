@@ -46,7 +46,7 @@ Predicat principal de l'algorithme :
 :- ['taquin.pl'].    % predicats definissant le systeme a etudier
 :- set_prolog_stack(global, limit(1 000 000 000 000)).
 :- set_prolog_stack(trail,  limit(200 000 000 000)).
-:- set_prolog_stack(local,  limit(20 000 000 000)).
+:- set_prolog_stack(local,  limit(200 000 000 000)).
 
 %*******************************************************************************
 
@@ -134,6 +134,9 @@ loop_successors([[S,[Fs,Hs,Gs],U,A]|Rest],Pui,Pfi,Puf,Pff,Q):-
 aetoile(Pf,Pu,_,_IS,_FS,N) :-
     empty(Pf),
     empty(Pu),
+    write("Echec en : "),
+	write(N),
+	write("\n"),
     writeln("PAS DE SOLUTION: L'ETAT FINAL N'EST PAS ATTEIGNABLE !").
 
 %Cas trivial : le noeud minimal de Pf correspond a la situation finale

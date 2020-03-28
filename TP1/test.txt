@@ -1,0 +1,25 @@
+?- performance.
+Reussit en : 5
+up -> up -> left -> down -> right -> 
+IS1 : 12
+Reussit en : 2
+up -> right -> 
+IS2 : 0
+Reussit en : 10
+right -> up -> left -> left -> down -> right -> down -> left -> up -> right -> 
+IS3 : 2
+Reussit en : 76
+down -> left -> up -> up -> right -> right -> down -> left -> down -> left -> up -> up -> right -> right -> down -> left -> down -> left -> up -> right -> 
+IS4 : 13
+Reussit en : 2256
+right -> up -> left -> left -> down -> down -> right -> right -> up -> up -> left -> left -> down -> down -> right -> right -> up -> up -> left -> left -> down -> down -> right -> right -> up -> up -> left -> left -> down -> right -> 
+IS5 : 499
+Reussit en : 1
+right -> 
+IS8 : 1
+Echec en : 181440
+PAS DE SOLUTION: L'ETAT FINAL N'EST PAS ATTEIGNABLE !
+
+IS6 : 51247
+ERROR: Out of local stack
+
