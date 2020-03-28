@@ -1,0 +1,11 @@
+?- testheuristique.
+IS1 : [[b,h,c],[a,f,d],[g,vide,e]] Heuristique 1 :4 Heuristique 2 :5
+IS2 : [[a,b,c],[g,h,d],[vide,f,e]] Heuristique 1 :2 Heuristique 2 :5
+IS3 : [[b,c,d],[a,vide,g],[f,h,e]] Heuristique 1 :7 Heuristique 2 :10
+IS4 : [[f,g,a],[h,vide,b],[d,c,e]] Heuristique 1 :6 Heuristique 2 :16
+IS5 : [[e,f,g],[d,vide,h],[c,b,a]] Heuristique 1 :8 Heuristique 2 :24
+IS6 : [[a,b,c],[g,vide,d],[h,f,e]] Heuristique 1 :2 Heuristique 2 :2
+IS7 : [[b,a,f,i],[k,h,c,m],[d,g,n,o],[e,l,j,vide]] Heuristique 1 :15 Heuristique 2 :38
+IS8 : [[a,b,c,d],[e,f,g,h],[i,j,k,j],[m,n,vide,o]] Heuristique 1 :2 Heuristique 2 :3
+true.
+

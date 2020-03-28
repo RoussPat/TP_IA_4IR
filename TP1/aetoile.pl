@@ -205,6 +205,99 @@ main2(IS,FS) :-
 %	Tests de performance
 %*************************
 
+testheuristique :-
+	initial_state1(IS1), %3x3
+	initial_state2(IS2), %3x3
+	initial_state3(IS3), %3x3
+	initial_state4(IS4), %3x3
+	initial_state5(IS5), %3x3
+	initial_state6(IS6), %3x3 non connex
+	initial_state7(IS7), %4x4 trop lourd
+	initial_state8(IS8), %4x4
+	final_state3x3(FS3), %3x3
+	final_state4x4(FS4), %4x4
+
+write("IS1 : "),
+write(IS1),
+write(" Heuristique 1 :"),
+heuristique1(IS1,H11,FS3),
+write(H11),
+write(" Heuristique 2 :"),
+heuristique2(IS1,H21,FS3),
+write(H21),
+write("\n"),
+
+write("IS2 : "),
+write(IS2),
+write(" Heuristique 1 :"),
+heuristique1(IS2,H12,FS3),
+write(H12),
+write(" Heuristique 2 :"),
+heuristique2(IS1,H22,FS3),
+write(H22),
+write("\n"),
+
+write("IS3 : "),
+write(IS3),
+write(" Heuristique 1 :"),
+heuristique1(IS3,H13,FS3),
+write(H13),
+write(" Heuristique 2 :"),
+heuristique2(IS3,H23,FS3),
+write(H23),
+write("\n"),
+
+write("IS4 : "),
+write(IS4),
+write(" Heuristique 1 :"),
+heuristique1(IS4,H14,FS3),
+write(H14),
+write(" Heuristique 2 :"),
+heuristique2(IS4,H24,FS3),
+write(H24),
+write("\n"),
+
+write("IS5 : "),
+write(IS5),
+write(" Heuristique 1 :"),
+heuristique1(IS5,H15,FS3),
+write(H15),
+write(" Heuristique 2 :"),
+heuristique2(IS5,H25,FS3),
+write(H25),
+write("\n"),
+
+write("IS6 : "),
+write(IS6),
+write(" Heuristique 1 :"),
+heuristique1(IS6,H16,FS3),
+write(H16),
+write(" Heuristique 2 :"),
+heuristique2(IS6,H26,FS3),
+write(H26),
+write("\n"),
+
+write("IS7 : "),
+write(IS7),
+write(" Heuristique 1 :"),
+heuristique1(IS7,H17,FS4),
+write(H17),
+write(" Heuristique 2 :"),
+heuristique2(IS7,H27,FS4),
+write(H27),
+write("\n"),
+
+write("IS8 : "),
+write(IS8),
+write(" Heuristique 1 :"),
+heuristique1(IS8,H18,FS4),
+write(H18),
+write(" Heuristique 2 :"),
+heuristique2(IS8,H28,FS4),
+write(H28),
+write("\n").
+
+
 performance :-
 	initial_state1(IS1), %3x3
 	initial_state2(IS2), %3x3
