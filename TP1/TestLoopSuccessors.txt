@@ -1,0 +1,22 @@
+
+?- test_loop_successors.
+IS1 : [[b,h,c],[a,f,d],[g,vide,e]]
+Expands :[[[[b,h,c],[a,vide,d],[g,f,e]],[5,4,1],[[b,h,c],[a,f,d],[g,vide,e]],up],[[[b,h,c],[a,f,d],[vide,g,e]],[7,6,1],[[b,h,c],[a,f,d],[g,vide,e]],left],[[[b,h,c],[a,f,d],[g,e,vide]],[7,6,1],[[b,h,c],[a,f,d],[g,vide,e]],right]]
+loops successors :
+ Pu :avl(avl(avl(nil,[[[b,h,c],[a,f,d],[g,e,vide]],[7,6,1],[[b,h,c],[a,f,d],[g,vide,e]],right],nil,0),[[[b,h,c],[a,f,d],[g,vide,e]],[5,5,0],nil,nil],nil,1),[[[b,h,c],[a,f,d],[vide,g,e]],[7,6,1],[[b,h,c],[a,f,d],[g,vide,e]],left],avl(nil,[[[b,h,c],[a,vide,d],[g,f,e]],[5,4,1],[[b,h,c],[a,f,d],[g,vide,e]],up],nil,0),2)
+ Pfavl(avl(nil,[[5,4,1],[[b,h,c],[a,vide,d],[g,f,e]]],nil,0),[[5,5,0],[[b,h,c],[a,f,d],[g,vide,e]]],avl(avl(nil,[[7,6,1],[[b,h,c],[a,f,d],[g,e,vide]]],nil,0),[[7,6,1],[[b,h,c],[a,f,d],[vide,g,e]]],nil,1),2)
+ Q:nil
+IS2 :[[a,b,c],[g,h,d],[vide,f,e]]
+Expands :[[[[a,b,c],[vide,h,d],[g,f,e]],[2,1,1],[[a,b,c],[g,h,d],[vide,f,e]],up],[[[a,b,c],[g,h,d],[f,vide,e]],[4,3,1],[[a,b,c],[g,h,d],[vide,f,e]],right]]
+loops successors :
+Pu :avl(avl(nil,[[[a,b,c],[g,h,d],[f,vide,e]],[4,3,1],[[a,b,c],[g,h,d],[vide,f,e]],right],nil,0),[[[a,b,c],[g,h,d],[vide,f,e]],[2,2,0],nil,nil],avl(nil,[[[a,b,c],[vide,h,d],[g,f,e]],[2,1,1],[[a,b,c],[g,h,d],[vide,f,e]],up],nil,0),1)
+Pfavl(avl(nil,[[2,1,1],[[a,b,c],[vide,h,d],[g,f,e]]],nil,0),[[2,2,0],[[a,b,c],[g,h,d],[vide,f,e]]],avl(nil,[[4,3,1],[[a,b,c],[g,h,d],[f,vide,e]]],nil,0),1)
+Q:nil
+IS3 :[[b,c,d],[a,vide,g],[f,h,e]]
+Expands :[[[[b,vide,d],[a,c,g],[f,h,e]],[12,11,1],[[b,c,d],[a,vide,g],[f,h,e]],up],[[[b,c,d],[a,h,g],[f,vide,e]],[10,9,1],[[b,c,d],[a,vide,g],[f,h,e]],down],[[[b,c,d],[vide,a,g],[f,h,e]],[12,11,1],[[b,c,d],[a,vide,g],[f,h,e]],left],[[[b,c,d],[a,g,vide],[f,h,e]],[10,9,1],[[b,c,d],[a,vide,g],[f,h,e]],right]]
+loops successors :
+Pu :avl(avl(avl(nil,[[[b,c,d],[a,g,vide],[f,h,e]],[10,9,1],[[b,c,d],[a,vide,g],[f,h,e]],right],nil,0),[[[b,c,d],[a,h,g],[f,vide,e]],[10,9,1],[[b,c,d],[a,vide,g],[f,h,e]],down],nil,1),[[[b,c,d],[a,vide,g],[f,h,e]],[10,10,0],nil,nil],avl(avl(nil,[[[b,c,d],[vide,a,g],[f,h,e]],[12,11,1],[[b,c,d],[a,vide,g],[f,h,e]],left],nil,0),[[[b,vide,d],[a,c,g],[f,h,e]],[12,11,1],[[b,c,d],[a,vide,g],[f,h,e]],up],nil,1),2)
+Pfavl(avl(avl(nil,[[10,9,1],[[b,c,d],[a,g,vide],[f,h,e]]],nil,0),[[10,9,1],[[b,c,d],[a,h,g],[f,vide,e]]],nil,1),[[10,10,0],[[b,c,d],[a,vide,g],[f,h,e]]],avl(avl(nil,[[12,11,1],[[b,c,d],[vide,a,g],[f,h,e]]],nil,0),[[12,11,1],[[b,vide,d],[a,c,g],[f,h,e]]],nil,1),2)
+Q:nil
+true 
+

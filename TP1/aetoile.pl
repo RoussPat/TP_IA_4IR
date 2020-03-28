@@ -212,90 +212,90 @@ testheuristique :-
 	initial_state4(IS4), %3x3
 	initial_state5(IS5), %3x3
 	initial_state6(IS6), %3x3 non connex
-	initial_state7(IS7), %4x4 trop lourd
-	initial_state8(IS8), %4x4
+	initial_state7(IS7), %4x4 
+	initial_state8(IS8), %4x4 trop lourd
 	final_state3x3(FS3), %3x3
 	final_state4x4(FS4), %4x4
 
-write("IS1 : "),
-write(IS1),
-write(" Heuristique 1 :"),
-heuristique1(IS1,H11,FS3),
-write(H11),
-write(" Heuristique 2 :"),
-heuristique2(IS1,H21,FS3),
-write(H21),
-write("\n"),
+	write("IS1 : "),
+	write(IS1),
+	write(" Heuristique 1 :"),
+	heuristique1(IS1,H11,FS3),
+	write(H11),
+	write(" Heuristique 2 :"),
+	heuristique2(IS1,H21,FS3),
+	write(H21),
+	write("\n"),
 
-write("IS2 : "),
-write(IS2),
-write(" Heuristique 1 :"),
-heuristique1(IS2,H12,FS3),
-write(H12),
-write(" Heuristique 2 :"),
-heuristique2(IS1,H22,FS3),
-write(H22),
-write("\n"),
+	write("IS2 : "),
+	write(IS2),
+	write(" Heuristique 1 :"),
+	heuristique1(IS2,H12,FS3),
+	write(H12),
+	write(" Heuristique 2 :"),
+	heuristique2(IS1,H22,FS3),
+	write(H22),
+	write("\n"),
 
-write("IS3 : "),
-write(IS3),
-write(" Heuristique 1 :"),
-heuristique1(IS3,H13,FS3),
-write(H13),
-write(" Heuristique 2 :"),
-heuristique2(IS3,H23,FS3),
-write(H23),
-write("\n"),
+	write("IS3 : "),
+	write(IS3),
+	write(" Heuristique 1 :"),
+	heuristique1(IS3,H13,FS3),
+	write(H13),
+	write(" Heuristique 2 :"),
+	heuristique2(IS3,H23,FS3),
+	write(H23),
+	write("\n"),
 
-write("IS4 : "),
-write(IS4),
-write(" Heuristique 1 :"),
-heuristique1(IS4,H14,FS3),
-write(H14),
-write(" Heuristique 2 :"),
-heuristique2(IS4,H24,FS3),
-write(H24),
-write("\n"),
+	write("IS4 : "),
+	write(IS4),
+	write(" Heuristique 1 :"),
+	heuristique1(IS4,H14,FS3),
+	write(H14),
+	write(" Heuristique 2 :"),
+	heuristique2(IS4,H24,FS3),
+	write(H24),
+	write("\n"),
 
-write("IS5 : "),
-write(IS5),
-write(" Heuristique 1 :"),
-heuristique1(IS5,H15,FS3),
-write(H15),
-write(" Heuristique 2 :"),
-heuristique2(IS5,H25,FS3),
-write(H25),
-write("\n"),
+	write("IS5 : "),
+	write(IS5),
+	write(" Heuristique 1 :"),
+	heuristique1(IS5,H15,FS3),
+	write(H15),
+	write(" Heuristique 2 :"),
+	heuristique2(IS5,H25,FS3),
+	write(H25),
+	write("\n"),
 
-write("IS6 : "),
-write(IS6),
-write(" Heuristique 1 :"),
-heuristique1(IS6,H16,FS3),
-write(H16),
-write(" Heuristique 2 :"),
-heuristique2(IS6,H26,FS3),
-write(H26),
-write("\n"),
+	write("IS6 : "),
+	write(IS6),
+	write(" Heuristique 1 :"),
+	heuristique1(IS6,H16,FS3),
+	write(H16),
+	write(" Heuristique 2 :"),
+	heuristique2(IS6,H26,FS3),
+	write(H26),
+	write("\n"),
 
-write("IS7 : "),
-write(IS7),
-write(" Heuristique 1 :"),
-heuristique1(IS7,H17,FS4),
-write(H17),
-write(" Heuristique 2 :"),
-heuristique2(IS7,H27,FS4),
-write(H27),
-write("\n"),
+	write("IS7 : "),
+	write(IS7),
+	write(" Heuristique 1 :"),
+	heuristique1(IS7,H17,FS4),
+	write(H17),
+	write(" Heuristique 2 :"),
+	heuristique2(IS7,H27,FS4),
+	write(H27),
+	write("\n"),
 
-write("IS8 : "),
-write(IS8),
-write(" Heuristique 1 :"),
-heuristique1(IS8,H18,FS4),
-write(H18),
-write(" Heuristique 2 :"),
-heuristique2(IS8,H28,FS4),
-write(H28),
-write("\n").
+	write("IS8 : "),
+	write(IS8),
+	write(" Heuristique 1 :"),
+	heuristique1(IS8,H18,FS4),
+	write(H18),
+	write(" Heuristique 2 :"),
+	heuristique2(IS8,H28,FS4),
+	write(H28),
+	write("\n").
 
 
 performance :-
@@ -305,8 +305,8 @@ performance :-
 	initial_state4(IS4), %3x3
 	initial_state5(IS5), %3x3
 	initial_state6(IS6), %3x3 non connex
-	initial_state7(IS7), %4x4 trop lourd
-	initial_state8(IS8), %4x4
+	initial_state7(IS7), %4x4 
+	initial_state8(IS8), %4x4 trop lourd
 	final_state3x3(FS3), %3x3
 	final_state4x4(FS4), %4x4
     statistics(runtime, [Start1,_]),
@@ -372,7 +372,44 @@ performance :-
 %**********************
 	
 % Test expand/4 sur la situation initiale
-test_loop_successors(LS,Pu2,Pf2,Q,IS,FS) :-
+test_loop_successors :-
+	initial_state1(IS1), %3x3
+	initial_state2(IS2), %3x3
+	initial_state3(IS3), %3x3
+	final_state3x3(FS3), %3x3
+
+	write("IS1 : "),
+	write(IS1),
+	write("\nExpands :"),
+	test_expands2(LS1,IS1,FS3),
+	write(LS1),
+	write("\nloops successors :"),
+		test_loop_successors2(LS1,Pu1,Pf1,Q1,IS1,FS3),
+	write("\n Pu :"),write(Pu1), write("\n Pf"), write(Pf1),write("\n Q:"), write(Q1),
+	write("\n"),
+		
+	write("IS2 :"),
+	write(IS2),
+	write("\nExpands :"),
+	test_expands2(LS2,IS2,FS3),
+	write(LS2),
+	write("\nloops successors :"),
+		test_loop_successors2(LS2,Pu2,Pf2,Q2,IS2,FS3),
+	write("\nPu :"),write(Pu2), write("\nPf"), write(Pf2),write("\nQ:"), write(Q2),
+	write("\n"),
+
+	write("IS3 :"),
+	write(IS3),
+	write("\nExpands :"),
+	test_expands2(LS3,IS3,FS3),
+	write(LS3),
+	write("\nloops successors :"),
+		test_loop_successors2(LS3,Pu3,Pf3,Q3,IS3,FS3),
+	write("\nPu :"),write(Pu3), write("\nPf"), write(Pf3),write("\nQ:"), write(Q3),
+	write("\n").
+		
+
+test_loop_successors2(LS,Pu2,Pf2,Q,IS,FS) :-
     heuristique(IS,H0,FS),
     G0 is 0,
     F0 is H0 + G0,
@@ -386,7 +423,39 @@ test_loop_successors(LS,Pu2,Pf2,Q,IS,FS) :-
     loop_successors(LS,Pu1,Pf1,Pu2,Pf2,Q).
 
 
-% A COMPLETER
+test_expands  :-
+	initial_state1(IS1), %3x3
+	initial_state2(IS2), %3x3
+	initial_state3(IS3), %3x3
+	final_state3x3(FS3), %3x3
+
+	write("IS1 : "),
+	write(IS1),
+	write(" Expands :"),
+	test_expands2(LS1,IS1,FS3),
+	write(LS1),
+	write("\n"),
+		
+	write("IS2 : "),
+	write(IS2),
+	write(" Expands :"),
+	test_expands2(LS2,IS2,FS3),
+	write(LS2),
+	write("\n"),
+
+	write("IS3 :"),
+	write(IS3),
+	write(" Expands :"),
+	test_expands2(LS3,IS3,FS3),
+	write(LS3),
+	write("\n").
+
+test_expands2(LS,IS,FS) :-
+    heuristique(IS,H0,FS),
+    G0 is 0,
+    F0 is H0 + G0,
+
+    findall([S,[Fs,Hs,Gs],IS,A],expand(IS,S,[F0,H0,G0],[Fs,Hs,Gs],A,FS),LS).
 
 
 /* A VOIR SI ON GARDE (javais ca dans mon code)

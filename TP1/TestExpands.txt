@@ -1,0 +1,6 @@
+?- test_expands.
+IS1 : [[b,h,c],[a,f,d],[g,vide,e]] Expands :[[[[b,h,c],[a,vide,d],[g,f,e]],[5,4,1],[[b,h,c],[a,f,d],[g,vide,e]],up],[[[b,h,c],[a,f,d],[vide,g,e]],[7,6,1],[[b,h,c],[a,f,d],[g,vide,e]],left],[[[b,h,c],[a,f,d],[g,e,vide]],[7,6,1],[[b,h,c],[a,f,d],[g,vide,e]],right]]
+IS2 : [[a,b,c],[g,h,d],[vide,f,e]] Expands :[[[[a,b,c],[vide,h,d],[g,f,e]],[2,1,1],[[a,b,c],[g,h,d],[vide,f,e]],up],[[[a,b,c],[g,h,d],[f,vide,e]],[4,3,1],[[a,b,c],[g,h,d],[vide,f,e]],right]]
+IS3 :[[b,c,d],[a,vide,g],[f,h,e]] Expands :[[[[b,vide,d],[a,c,g],[f,h,e]],[12,11,1],[[b,c,d],[a,vide,g],[f,h,e]],up],[[[b,c,d],[a,h,g],[f,vide,e]],[10,9,1],[[b,c,d],[a,vide,g],[f,h,e]],down],[[[b,c,d],[vide,a,g],[f,h,e]],[12,11,1],[[b,c,d],[a,vide,g],[f,h,e]],left],[[[b,c,d],[a,g,vide],[f,h,e]],[10,9,1],[[b,c,d],[a,vide,g],[f,h,e]],right]]
+true.
+
