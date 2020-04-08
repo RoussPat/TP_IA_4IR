@@ -150,14 +150,14 @@ aetoile(Pf,Pu,Q,IS,FS,N) :-
 aetoile(Pf,Pu,Q,IS,FS,N) :-
     suppress_min([[Fu,Hu,Gu],U],Pf,Pf1),
     suppress([U,[Fu,Hu,Gu],Pere,Au],Pu,Pu1),
-    /*write("["), 
+    write("["), 
 	write(Fu), 
 	write(","), 
 	write(Hu), 
 	write(","), 
 	write(Gu), 
 	write("]"),    
-    write_state(U),*/
+    write_state(U),
     
     findall([S,[Fs,Hs,Gs],U,A_new],
 			(expand(U,S,[_,_,Gu],[Fs,Hs,Gs],A_new, FS)),
